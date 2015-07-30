@@ -43,6 +43,10 @@
     <AssemblyOriginatorKeyFile>..\..\assets\Serilog.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Serilog, Version=1.5.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Serilog.1.5.1\lib\net45\Serilog.dll</HintPath>
@@ -57,6 +61,13 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sinks\DomainAwareSeq\DomainAwareDurableSeqSink.cs" />
+    <Compile Include="Sinks\DomainAwareSeq\DomainAwareDurableSeqSinkProxy.cs" />
+    <Compile Include="Sinks\DomainAwareSeq\DomainAwareSeqLoggerConfigurationExtensions.cs" />
+    <Compile Include="Sinks\DomainAwareSeq\DomainAwareSeqSink.cs" />
+    <Compile Include="Sinks\DomainAwareSeq\DomainAwareSeqSinkProxy.cs" />
+    <Compile Include="Sinks\DomainAwareSeq\StephenCleary\AppDomainHelper.cs" />
+    <Compile Include="Sinks\DomainAwareSeq\StephenCleary\DomainAwareSingleton.cs" />
     <Compile Include="Sinks\Seq\DurableSeqSink.cs" />
     <Compile Include="Sinks\Seq\HttpLogShipper.cs" />
     <Compile Include="Sinks\Seq\SeqApi.cs" />
